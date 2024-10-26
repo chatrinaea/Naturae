@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ind">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aturae - Personal Care Services</title>
+    <link rel="icon" href="logo_nture-removebg-preview.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4c945c;
+            color: #333;
+        }
+
+        header {
+            background-image: url('C:/Users/pitub/Documents/VSCODE/BG COLORFUL.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0c0c0c;
+            text-align: center;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav {
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: rgb(0, 32, 2);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #fff;
+            background-color: #3d6d4b;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .motto {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .motto:hover {
+            color: #36794a;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .services {
+            display: none;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 5px;
+        }
+
+        .team-member {
+            position: relative;
+            margin: 5px;
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+
+        .team-image {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover .team-image {
+            transform: rotate(5deg);
+        }
+
+        .member-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(85, 121, 93, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .team-member:hover .member-info {
+            opacity: 1;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fdfdfd;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            color: #f7faf7;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #fcfdfb;
+        }
+
+        footer .contact-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo_nture-removebg-preview.png" alt="Naturae Logo" class="logo">
+            <h1>aturae - Personal Care for Everyone</h1>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="abtus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="motto">
+        <h2>At (N)aturae, Every Treatment Is a Celebration of Self</h2>
+    </div>
+
+    <!-- Vision Mision Section -->
+    <div id="vimison" class="section fade-in">
+        <h2>Visi</h2>
+        <p>
+            Menjadi pemimpin global dalam layanan perawatan pribadi yang inklusif dan berkelanjutan, serta mempromosikan kesejahteraan holistik yang menghormati tubuh, pikiran, dan alam.
+        </p>
+        <h2>Misi</h2>
+        <p>1. Memberikan layanan perawatan pribadi yang dapat diakses oleh semua orang</p>
+        <p>2. Mengutamakan bahan-bahan alami dan berkelanjutan</p>
+        <p>3. Menciptakan pengalaman perawatan diri yang komprehensif</p>
+        <p>4. Berinovasi secara berkelanjutan</p>
+        <p>5. Mendorong kepedulian terhadap lingkungan</p>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="section fade-in">
+        <h2>Tentang Kami ?</h2>
+        <p>
+            Di (N)aturae, kami percaya pada perawatan diri yang dapat diakses dan dipersonalisasi untuk semua orang, termasuk individu dengan disabilitas. Kami menawarkan berbagai layanan, mulai dari perawatan tubuh, perawatan rambut, perawatan mental, terapi fisik, hingga perawatan kulit, semuanya menggunakan produk alami berkualitas tinggi. Tim kami berdedikasi untuk memberikan perawatan yang inklusif dan profesional, dan kami juga menawarkan kunjungan ke rumah untuk kenyamanan Anda. Biarkan kami membawa pengalaman kesehatan holistik kepada Anda—membantu Anda tampil dan merasa terbaik.
+        </p>
+        <div class="team">
+            <div class="team-member">
+                <img src="C:/Users/pitub/Documents/VSCODE/m1.jpg" alt="Team Member 1" class="team-image">
+                <div class="member-info">
+                    <h4>Chatrina Early Aprillia</h4>
+                    <p>Ahli Perawatan Kulit dan Kesehatan Holistik</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="C:/Users/pitub/Documents/VSCODE/member2.jpg" alt="Team Member 2" class="team-image">
+                <div class="member-info">
+                    <h4>Devika Sari Puput</h4>
+                    <p>Spesialis Perawatan Kesehatan Mental dan Konseling</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="C:/Users/pitub/Documents/VSCODE/member3.jpg" alt="Team Member 3" class="team-image">
+                <div class="member-info">
+                    <h4>Dinda Aisyah Ariani</h4>
+                    <p>Berpengalaman dalam Perawatan Tubuh dan Nutrisi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 (N)aturae - Personal care Service. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/naturcare.ae/profilecard/?igsh=cmVuZHlobmw3amU4YjIxN2Q5MzA=" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/naturae1" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/aturae" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="contact-info">
+            <p>Contact us: info@naturae.com</p>
+            <p>Phone: +62 812 3456 7890</p>
+        </div>
+    </footer>
+</body>
+
+</html>

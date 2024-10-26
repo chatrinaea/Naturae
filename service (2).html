@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ind">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aturae - Services</title>
+    <link rel="icon" href="logo_nture-removebg-preview.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4c945c;
+            color: #333;
+        }
+
+        header {
+            background-image: url('C:/Users/pitub/Documents/VSCODE/BG COLORFUL.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0c0c0c;
+            text-align: center;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: rgb(0, 32, 2);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #3d6d4b;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .motto {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            text-align: center;
+            margin: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+        }
+
+        .section p:last-of-type {
+            margin-bottom: 25px;
+        }
+
+        .slideshow-container {
+            max-width: 50%;
+            position: relative;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            border-radius: 10px; 
+        }
+        .mySlides {
+            display: none;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            text-align: center;
+            width: 180px;
+            padding: 20px;
+            background-color: #bdeebb;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .category:hover {
+            background-color: #ddd;
+        }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .category-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+    .product-gallery {
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        }
+
+    .product {
+        width: 250px;
+        padding: 20px;
+        background-color: #bdeebb;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        }
+
+    .product-info h3 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .product-info p {
+        font-size: 13px;
+        color: #555;
+    }
+
+    .product-info a {
+        display: inline-block;
+        padding: 8px 15px;
+        margin-top: 10px;
+        background-color: #4c945c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .product-info a:hover {
+        background-color: #3d6d4b;
+    }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: red;
+            font-size: 18px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .modal-description {
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fdfdfd;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            color: #f7faf7;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #fcfdfb; 
+        }
+
+        footer .contact-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo_nture-removebg-preview.png" alt="Naturae Logo" class="logo">
+            <h1>aturae - Personal Care for Everyone</h1>
+        </div>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="service.html">Services</a>
+            <a href="abtus.html" >About Us</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+    </header>
+
+<div class="motto">
+    <h2>At (N)aturae, Every Treatment Is a Celebration of Self</h2> 
+</div>
+
+<!-- Slideshow Section -->
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://images.pexels.com/photos/6620860/pexels-photo-6620860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="https://images.pexels.com/photos/6111605/pexels-photo-6111605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="https://images.pexels.com/photos/8467963/pexels-photo-8467963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Categories Section -->
+<div class="section">
+    <h2>Layanan Kami :</h2>
+    <p>
+        Di (N)aturae, kami menyediakan perawatan personal yang ramah bagi semua orang, termasuk individu dengan disabilitas. Layanan kami mencakup perawatan tubuh, perawatan rambut, perawatan mental, perawatan fisik, hingga perawatan kulit, dengan menggunakan produk alami untuk kesejahteraan Anda. Baik di klinik kami maupun melalui kunjungan ke rumah, kami siap memberikan perawatan terbaik yang disesuaikan dengan kebutuhan Anda.
+    </p>
+    <div class="categories">
+        <div class="category" onclick="openModal('Body Care', 'Kami menawarkan layanan perawatan tubuh yang meliputi pijat, perawatan kulit tubuh, dan terapi relaksasi untuk mengurangi stres dan meningkatkan kesejahteraan fisik. Layanan ini dirancang khusus untuk memenuhi kebutuhan fisik setiap individu, termasuk mereka yang memerlukan bantuan mobilitas. Dengan menggunakan produk alami dan sentuhan ahli, kami menjadikan perawatan tubuh pengalaman yang menenangkan dan menyegarkan.')">
+            <img src="https://img.freepik.com/premium-vector/pure-cosmetics-cream-serum-lotion-white-background-top-view-herbal-ingredients_1035899-9967.jpg" alt="Body Care">
+            <div class="category-title">Body Care</div>
+        </div>
+        <div class="category" onclick="openModal('Hair Care', 'Layanan perawatan rambut kami dirancang khusus untuk semua orang, termasuk individu dengan kebutuhan khusus. Tim kami menyediakan solusi perawatan rambut yang aman dan nyaman di rumah, menggunakan produk alami yang menutrisi kulit kepala dan rambut. Baik Anda memerlukan potongan rambut, perawatan rambut rontok, atau terapi untuk rambut sehat, kami hadir untuk merawat rambut Anda dengan penuh perhatian dan kelembutan.')">
+            <img src="https://images.pexels.com/photos/8467974/pexels-photo-8467974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hair Care">
+            <div class="category-title">Hair Care</div>
+        </div>
+        <div class="category" onclick="openModal('Mental Care', 'Kesehatan mental adalah aspek penting untuk kesejahteraan secara keseluruhan. Di (N)aturae, kami menawarkan layanan terapi mental, konseling, dan teknik relaksasi untuk membantu mengurangi kecemasan, stres, dan tekanan mental. Kami percaya bahwa perawatan kesehatan mental harus dapat diakses oleh semua orang, termasuk individu dengan disabilitas. Oleh karena itu, layanan kami dapat dinikmati di rumah dengan dukungan penuh dari terapis berpengalaman.')">
+            <img src="https://i.pinimg.com/564x/e9/37/4f/e9374f833b3512103cee210f1575f39a.jpg" alt="Mental care">
+            <div class="category-title">Mental Care</div>
+        </div>
+        <div class="category" onclick="openModal('Skin Care', 'Layanan perawatan kulit (N)aturae menekankan pada produk ramah lingkungan yang cocok untuk semua jenis kulit, termasuk kulit sensitif. Kami menyediakan perawatan wajah, eksfoliasi, dan hidrasi, semuanya dilakukan di kenyamanan rumah Anda. Layanan ini sangat ideal bagi individu dengan kebutuhan khusus, karena kami menawarkan perawatan yang personal dan inklusif, memastikan setiap orang merasa nyaman dan terawat dengan baik.')">
+            <img src="https://st4.depositphotos.com/1868027/38217/i/450/depositphotos_382174748-stock-photo-natural-cosmetics-green-leaves-white.jpg" alt="Skin Care">
+            <div class="category-title">Skin Care</div>
+        </div>
+        <div class="category" onclick="openModal('Physical Care', 'Untuk menjaga kesehatan fisik, kami menawarkan program kebugaran dan terapi fisik yang dipersonalisasi sesuai dengan kebutuhan masing-masing individu. Dari terapi gerakan yang lembut hingga latihan kebugaran, kami bekerja sama dengan profesional kesehatan untuk menciptakan program yang ramah disabilitas, memastikan setiap orang dapat meningkatkan kesehatan fisik mereka dengan cara yang sesuai dengan kondisi mereka.')">
+            <img src="https://i.pinimg.com/564x/5b/3c/f7/5b3cf7240f32e1158b2541c3f117371e.jpg" alt="Physical care">
+            <div class="category-title">Physical Care</div>
+        </div>
+    </div>
+</div>
+
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<!-- Product Recommendations Section -->
+<div class="section">
+    <h2>Rekomendasi Produk Natural</h2>
+    <p><strong><em>Temukan Kebaikan Alami untuk Kesehatan dan Kecantikan Anda</em></strong></p>
+    <p>Kami dengan bangga mempersembahkan rangkaian produk perawatan alami yang diformulasikan untuk memenuhi berbagai kebutuhan kulit dan rambut Anda. Setiap produk dipilih secara hati-hati, menggunakan bahan-bahan terbaik dari alam yang terbukti aman dan efektif.</p>
+    <div class="product-gallery">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/15/c0/5a/15c05a129315a0aacfc9c80a12b7b465.jpg" alt="Natural Body Lotion">
+            <div class="product-info">
+                <h3>Natural Body Lotion</h3>
+                <p>Merawat kelembapan kulit dengan bahan alami yang aman untuk semua jenis kulit.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/52/ec/b3/52ecb3c32f3f4418915c1ce33521b13e.jpg" alt="Organic Hair Oil">
+            <div class="product-info">
+                <h3>Organic Hair Oil</h3>
+                <p>Menutrisi rambut dengan minyak alami yang membantu mengurangi kerontokan dan memperkuat akar rambut.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/c9/30/5c/c9305ceb00e9bb1879435bc996929223.jpg" alt="Aloe Vera Gel">
+            <div class="product-info">
+                <h3>Aloe Vera Gel</h3>
+                <p>Pelembap serbaguna untuk kulit sensitif, efektif menghidrasi dan menenangkan iritasi kulit.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/52/e0/82/52e082d982f2644ec79bcf9905c27a42.jpg" alt="Shea Butter">
+            <div class="product-info">
+                <h3>Body Shea Butter</h3>
+                <p>Menjaga kelembapan kulit yang sangat kering dan cocok untuk kulit sensitif. Shea butter kaya akan vitamin A dan E yang baik untuk regenerasi kulit.
+                    Lulur Kopi</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/27/bb/9b/27bb9b373cf9e617d38e5e9b43d232ae.jpg" alt="Minyak Zaitun">
+            <div class="product-info">
+                <h3>Minyak Zaitun</h3>
+                <p>Pelembap alami untuk kulit. Minyak zaitun juga mengandung antioksidan yang dapat membantu memperlambat tanda-tanda penuaan.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/12/8c/ca/128cca9e35b754082702b07bcd080f20.jpg" alt="Coffe Scrub">
+            <div class="product-info">
+                <h3>Coffe Scrub</h3>
+                <p>Mengangkat sel kulit mati dan meremajakan kulit. Lulur kopi juga dapat meningkatkan sirkulasi darah, sehingga membuat kulit lebih cerah.
+                </p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/32/50/8e/32508e34178fba5d0347af4bd68f4ab9.jpg" alt="Minyak Rosehip">
+            <div class="product-info">
+                <h3>Minyak Rosehip</h3>
+                <p>Mengurangi tanda-tanda penuaan seperti garis halus dan kerutan. Minyak ini juga membantu mengatasi hiperpigmentasi dan bekas jerawat.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/11/92/6e/11926e79e250c225163e49143c82ac35.jpg" alt="Witch Hazel">
+            <div class="product-info">
+                <h3>Witch Hazel</h3>
+                <p>Sebagai toner alami yang membantu mengontrol minyak berlebih pada kulit dan mengurangi peradangan jerawat. Witch hazel juga baik untuk mengencangkan pori-pori.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 9 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/ae/cd/1f/aecd1fed94e4a867e4300a4c578e88f8.jpg" alt="Madu Murni">
+            <div class="product-info">
+                <h3>Madu Murni</h3>
+                <p>Melembapkan kulit dan memiliki sifat antibakteri alami yang sangat baik untuk mengatasi jerawat. Madu juga membantu menenangkan kulit yang meradang.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 10 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/e8/d0/37/e8d037682f14f6d19e70f5dd8eb4a2e3.jpg" alt="Minyak Lavender">
+            <div class="product-info">
+                <h3>Minyak Lavender</h3>
+                <p>Mengurangi stres dan meningkatkan relaksasi. Minyak lavender dapat digunakan dalam diffuser atau sebagai aromaterapi untuk membantu tidur lebih nyenyak.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 11 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/b1/80/3a/b1803a2702ada0689859eadd60b29957.jpg" alt="Teh Chamomile">
+            <div class="product-info">
+                <h3>Teh Chamomile</h3>
+                <p>Menenangkan pikiran dan tubuh. Teh chamomile dikenal memiliki efek relaksasi dan dapat mengurangi kecemasan ringan.
+                </p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+        <!-- Product 12 -->
+        <div class="product">
+            <img src="https://i.pinimg.com/564x/df/1f/0c/df1f0cbbc29769c9e98d6f314ad4eb52.jpg" alt="Minyak Peppermint">
+            <div class="product-info">
+                <h3>Minyak Peppermint</h3>
+                <p>Memberikan efek menyegarkan dan mengurangi rasa sakit otot. Minyak peppermint baik untuk pijatan setelah olahraga.</p>
+                <a href="https://forms.gle/rnX4xVpA47MzTNQv5" target="_blank">Beli Sekarang</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(title, description) {
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-description').innerText = description;
+        document.getElementById('serviceModal').style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('serviceModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('serviceModal')) {
+            closeModal();
+        }
+    }
+</script>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 (N)aturae - Personal care Service. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/naturcare.ae/profilecard/?igsh=cmVuZHlobmw3amU4" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/+6281554315823" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:naturcare.ea@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="contact-info">
+        <p>Instagram : @naturcare.ae</p>
+        <p>WhatsApp : +6281554315823</p>
+        <p>Email : naturcare.ae@gmail.com</p>
+    </div>
+  </footer>
+  
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+      let autoSlideIndex = 0;
+    autoShowSlides();
+
+    function autoShowSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      autoSlideIndex++;
+      if (autoSlideIndex > slides.length) {autoSlideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[autoSlideIndex-1].style.display = "block";  
+      dots[autoSlideIndex-1].className += " active";
+      setTimeout(autoShowSlides, 3000);
+    }
+</script>
+
+</body>
+</html>
